@@ -1,0 +1,11 @@
+<p>
+  {{tervehdys}}
+</p>
+
+<ul>
+  <li *ngFor="let media of kaikkiMedia">
+    <img [src]="mediaUrl + media.thumbnail">
+    <h4>{{ media.title }}</h4>
+    <p>{{ media.description }}</p>
+  </li>
+</ul>

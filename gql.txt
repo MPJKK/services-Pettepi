@@ -1,0 +1,23 @@
+curl https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql \
+-H "Content-Type: application/graphql" \
+-d @- << DATA
+{
+      stop(id: "HSL:1140447") {
+        name
+        lat
+        lon
+        patterns {
+          id
+          name
+          route {
+            gtfsId
+            shortName
+            longName
+          }
+          directionId
+        }
+      }
+    }
+  }
+}
+DATA
